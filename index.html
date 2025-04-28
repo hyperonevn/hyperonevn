@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HYPER ONE – AI Automation for SMEs</title>
+  <meta name="description" content="Hyper One – Empowering SMEs with AI automation.">
+  <meta name="keywords" content="Hyper One, AI Automation, SME Growth, Business Automation, Hyper Bot, Hyper Brain HB1">
+  <meta property="og:title" content="HYPER ONE – AI Automation for SMEs">
+  <meta property="og:description" content="Empowering small businesses to automate and scale smarter with AI.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/hyperone.logo.jpg">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&family=Oswald:wght@600&family=Fugaz+One&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { scroll-behavior: smooth; font-family: 'Space Grotesk', sans-serif; background-color: #0f1117; color: #f3f4f6; }
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #0f1117; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #1f2937; }
+    header h1 { color: #38bdf8; font-size: 1.5rem; font-weight: 700; text-transform: uppercase; }
+    nav a { color: #94a3b8; margin-left: 24px; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+    nav a:hover { color: #38bdf8; }
+    #language-toggle { margin-left: 24px; }
+    .section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
+    .section.visible { opacity: 1; transform: translateY(0); }
+    .about-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/about.png') center/cover no-repeat; color: #fff; }
+    .vision-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/vision.png') center/cover no-repeat; color: #fff; }
+    .ceo-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/ceo.png') center/cover no-repeat; color: #fff; }
+    .services-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/services.png') center/cover no-repeat; color: #fff; }
+    .projects-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/projects.png') center/cover no-repeat; color: #fff; }
+    .contact-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/contact.png') center/cover no-repeat; color: #fff; }
+    .company-section { background: #0f1117; }
+    .section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #94a3b8; border-top: 1px solid #1e293b; background-color: #0f1117; }
+    .fixed-contact-bar { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #0f172a; display: flex; justify-content: space-around; align-items: center; padding: 10px 0; z-index: 10000; border-top: 1px solid #334155; }
+    .fixed-contact-bar a { color: #f3f4f6; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.95rem; padding: 6px 12px; border-radius: 6px; transition: background 0.2s; }
+    .fixed-contact-bar a:hover { background-color: #1e293b; }
+    .fixed-contact-bar .icon { font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1><img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/hyperone.logo.jpg" alt="Hyper One Logo" style="height: 36px; vertical-align: middle; margin-right: 12px;">HYPER ONE</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#vision">Vision</a>
+    <a href="#ceo">CEO</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <a href="#company">Company</a>
+    <span id="language-toggle">
+      <button onclick="switchLang('vi')">🇻🇳</button>
+      <button onclick="switchLang('en')">🇬🇧</button>
+    </span>
+  </nav>
+</header>
+
+<section id="about" class="section about-section">
+  <h2 data-lang="en">About Hyper One</h2>
+  <h2 data-lang="vi" style="display:none">Về Hyper One</h2>
+  <p data-lang="en">Hyper One is a movement to redefine how small businesses grow in the AI era. We empower SMEs to automate, scale, and thrive through solutions like Hyper Bot and Hyper Brain HB1.</p>
+  <p data-lang="vi" style="display:none">Hyper One là một phong trào tái định nghĩa cách doanh nghiệp nhỏ phát triển trong kỷ nguyên AI. Chúng tôi trao quyền cho SMEs tự động hóa, mở rộng và vươn mình thông qua các giải pháp như Hyper Bot và Hyper Brain HB1.</p>
+</section>
+
+<section id="vision" class="section vision-section">
+  <h2 data-lang="en">Vision & Mission</h2>
+  <h2 data-lang="vi" style="display:none">Tầm nhìn & Sứ mệnh</h2>
+  <p data-lang="en">Mission: Unlock the full potential of SMEs by orchestrating AI into every layer of their business operations.<br>Vision: Build Asia's largest AI-driven SME growth platform by 2030.</p>
+  <p data-lang="vi" style="display:none">Sứ mệnh: Giải phóng toàn bộ tiềm năng SMEs bằng cách điều phối AI vào mọi tầng vận hành.<br>Tầm nhìn: Xây dựng nền tảng tăng trưởng SMEs dựa trên AI lớn nhất châu Á vào năm 2030.</p>
+</section>
+
+<section id="ceo" class="section ceo-section">
+  <h2 data-lang="en">Message from CEO</h2>
+  <h2 data-lang="vi" style="display:none">Thông điệp từ CEO</h2>
+  <p data-lang="en"><em>"The future belongs not to the biggest, but to the smartest and most adaptive businesses."</em> — Lu Minh Tri</p>
+  <p data-lang="vi" style="display:none"><em>"Tương lai không thuộc về những kẻ to lớn nhất, mà thuộc về những người thông minh và thích nghi nhanh nhất."</em> — Lữ Minh Trí</p>
+</section>
+
+<section id="services" class="section services-section">
+  <h2 data-lang="en">Our Services</h2>
+  <h2 data-lang="vi" style="display:none">Dịch vụ của chúng tôi</h2>
+  <p data-lang="en">Hyper Bot, Hyper Brain HB1, AI CRM, AI Sales Automation, Business Workflow Automation.</p>
+  <p data-lang="vi" style="display:none">Hyper Bot, Hyper Brain HB1, AI CRM, Tự động hóa bán hàng, Tự động hóa quy trình kinh doanh.</p>
+</section>
+
+<section id="projects" class="section projects-section">
+  <h2 data-lang="en">Projects & Impact</h2>
+  <h2 data-lang="vi" style="display:none">Dự án & Tác động</h2>
+  <p data-lang="en">Automated 60% operations, reduced 40% CAC, and tripled SME revenues through tailored AI automation.</p>
+  <p data-lang="vi" style="display:none">Tự động hóa 60% quy trình vận hành, giảm 40% chi phí thu hút khách hàng, tăng trưởng doanh thu gấp 3 lần cho SMEs bằng AI cá nhân hóa.</p>
+</section>
+
+<section id="contact" class="section contact-section">
+  <h2 data-lang="en">Contact</h2>
+  <h2 data-lang="vi" style="display:none">Liên hệ</h2>
+  <p data-lang="en">Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, HCMC, Vietnam<br>Email: contact@hyperone.vn<br>Phone: +84 352 60 80 68</p>
+  <p data-lang="vi" style="display:none">Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM<br>Email: contact@hyperone.vn<br>Điện thoại: +84 352 60 80 68</p>
+</section>
+
+<section id="company" class="section company-section">
+  <h2 data-lang="en">Company Information</h2>
+  <h2 data-lang="vi" style="display:none">Thông tin công ty</h2>
+  <p data-lang="en">HYPER ONE CO., LTD<br>Tax Code: 0318921926<br>Legal Representative: Lu Minh Tri<br>Business Focus: AI SaaS for SME growth.</p>
+  <p data-lang="vi" style="display:none">CÔNG TY TNHH HYPER ONE<br>Mã số thuế: 0318921926<br>Người đại diện: Lữ Minh Trí<br>Lĩnh vực: AI SaaS cho phát triển doanh nghiệp SME.</p>
+</section>
+
+<footer>
+  © 2025 HYPER ONE CO., LTD – Empowering SMEs with AI Automation.
+</footer>
+
+<div class="fixed-contact-bar">
+  <a href="mailto:contact@hyperone.vn"><span class="icon">✉️</span> Email</a>
+  <a href="tel:+84352608068"><span class="icon">📞</span> Call</a>
+  <a href="https://m.me/HYPERONECO.LTD" target="_blank"><span class="icon">💬</span> Chat</a>
+</div>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+  });
+}
+(function() {
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(sec => observer.observe(sec));
+})();
+</script>
+
+</body>
+</html>
