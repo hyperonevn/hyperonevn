@@ -22,21 +22,29 @@
     #language-toggle { margin-left: 24px; }
     .section { padding: 100px 20px; max-width: 1200px; margin: 0 auto; opacity: 0; transform: translateY(50px); transition: all 1s ease-out; }
     .section.visible { opacity: 1; transform: translateY(0); }
-    .about-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/about.png') center/cover no-repeat; color: #fff; }
-    .vision-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/vision.png') center/cover no-repeat; color: #fff; }
-    .ceo-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/ceo.png') center/cover no-repeat; color: #fff; }
-    .services-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/services.png') center/cover no-repeat; color: #fff; }
-    .projects-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/projects.png') center/cover no-repeat; color: #fff; }
-    .contact-section { background: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/contact.png') center/cover no-repeat; color: #fff; }
+    .about-section, .vision-section, .ceo-section, .services-section, .projects-section, .contact-section {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #fff;
+    }
+    .about-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/about.png'); }
+    .vision-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/vision.png'); }
+    .ceo-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/ceo.png'); }
+    .services-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/services.png'); }
+    .projects-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/projects.png'); }
+    .contact-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/contact.png'); }
     .company-section { background: #0f1117; }
-    .section h2 { font-size: 2.5rem; margin-bottom: 20px; }
+    .section h2 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
     footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #94a3b8; border-top: 1px solid #1e293b; background-color: #0f1117; }
     .fixed-contact-bar { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #0f172a; display: flex; justify-content: space-around; align-items: center; padding: 10px 0; z-index: 10000; border-top: 1px solid #334155; }
     .fixed-contact-bar a { color: #f3f4f6; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.95rem; padding: 6px 12px; border-radius: 6px; transition: background 0.2s; }
     .fixed-contact-bar a:hover { background-color: #1e293b; }
     .fixed-contact-bar .icon { font-size: 1.1rem; }
+    button { background: none; border: none; font-size: 1.2rem; cursor: pointer; margin-left: 8px; }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -52,6 +60,7 @@
     <span id="language-toggle">
       <button onclick="switchLang('vi')">🇻🇳</button>
       <button onclick="switchLang('en')">🇬🇧</button>
+      <button onclick="switchLang('jp')">🇯🇵</button>
     </span>
   </nav>
 </header>
@@ -59,53 +68,58 @@
 <section id="about" class="section about-section">
   <h2 data-lang="en">About Hyper One</h2>
   <h2 data-lang="vi" style="display:none">Về Hyper One</h2>
+  <h2 data-lang="jp" style="display:none">ハイパーワンについて</h2>
   <p data-lang="en">Hyper One is a movement to redefine how small businesses grow in the AI era. We empower SMEs to automate, scale, and thrive through solutions like Hyper Bot and Hyper Brain HB1.</p>
   <p data-lang="vi" style="display:none">Hyper One là một phong trào tái định nghĩa cách doanh nghiệp nhỏ phát triển trong kỷ nguyên AI. Chúng tôi trao quyền cho SMEs tự động hóa, mở rộng và vươn mình thông qua các giải pháp như Hyper Bot và Hyper Brain HB1.</p>
+  <p data-lang="jp" style="display:none">Hyper Oneは、AI時代における中小企業の成長を再定義するムーブメントです。Hyper BotやHyper Brain HB1などのソリューションを通じて、中小企業に自動化、拡大、成長を促進します。</p>
 </section>
 
 <section id="vision" class="section vision-section">
   <h2 data-lang="en">Vision & Mission</h2>
   <h2 data-lang="vi" style="display:none">Tầm nhìn & Sứ mệnh</h2>
+  <h2 data-lang="jp" style="display:none">ビジョンとミッション</h2>
   <p data-lang="en">Mission: Unlock the full potential of SMEs by orchestrating AI into every layer of their business operations.<br>Vision: Build Asia's largest AI-driven SME growth platform by 2030.</p>
   <p data-lang="vi" style="display:none">Sứ mệnh: Giải phóng toàn bộ tiềm năng SMEs bằng cách điều phối AI vào mọi tầng vận hành.<br>Tầm nhìn: Xây dựng nền tảng tăng trưởng SMEs dựa trên AI lớn nhất châu Á vào năm 2030.</p>
+  <p data-lang="jp" style="display:none">ミッション：AIをすべての業務層に統合し、中小企業の潜在能力を最大限に引き出す。<br>ビジョン：2030年までにアジア最大のAI主導型SME成長プラットフォームを構築する。</p>
 </section>
 
 <section id="ceo" class="section ceo-section">
   <h2 data-lang="en">Message from CEO</h2>
   <h2 data-lang="vi" style="display:none">Thông điệp từ CEO</h2>
+  <h2 data-lang="jp" style="display:none">CEOからのメッセージ</h2>
   <p data-lang="en"><em>"The future is shaped by those who innovate fearlessly, adapt swiftly, and lead with purpose. In a world of constant change, success belongs to the businesses that evolve with courage and vision."</em> — Lu Minh Tri</p>
   <p data-lang="vi" style="display:none"><em>"Tương lai được tạo ra bởi những ai dám đổi mới không ngừng, thích nghi nhanh chóng và dẫn dắt bằng mục tiêu. Trong một thế giới thay đổi liên tục, thành công thuộc về những doanh nghiệp biết tiến hóa với lòng dũng cảm và tầm nhìn."</em> — Lữ Minh Trí</p>
+  <p data-lang="jp" style="display:none"><em>"未来は、恐れずに革新し、迅速に適応し、目的を持って導く者たちによって形作られます。絶えず変化する世界では、勇気とビジョンを持って進化する企業が成功を収めます。"</em> — ル・ミン・チ</p>
 </section>
-
-
-
-
-
-
 <section id="projects" class="section projects-section">
   <h2 data-lang="en">Projects & Impact</h2>
   <h2 data-lang="vi" style="display:none">Dự án & Tác động</h2>
+  <h2 data-lang="jp" style="display:none">プロジェクトと影響</h2>
   <p data-lang="en">Automated 60% operations, reduced 40% CAC, and tripled SME revenues through tailored AI automation.</p>
   <p data-lang="vi" style="display:none">Tự động hóa 60% quy trình vận hành, giảm 40% chi phí thu hút khách hàng, tăng trưởng doanh thu gấp 3 lần cho SMEs bằng AI cá nhân hóa.</p>
+  <p data-lang="jp" style="display:none">業務の60%を自動化し、CACを40%削減、AI自動化により中小企業の収益を3倍に増加させました。</p>
 </section>
 
 <section id="contact" class="section contact-section">
   <h2 data-lang="en">Contact</h2>
   <h2 data-lang="vi" style="display:none">Liên hệ</h2>
-  <p data-lang="en">Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, HCMC, Vietnam<br>Email: info@hyperonevn.com<br>Phone: +84 352 60 80 68 +84 342 60 80 68</p>
-  <p data-lang="vi" style="display:none">Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM<br>Email: info@hyperonevn.com<br>Điện thoại: +84 352 60 80 68 +84 342 60 80 68</p>
+  <h2 data-lang="jp" style="display:none">お問い合わせ</h2>
+  <p data-lang="en">Address: 68 Nguyen Hue, Ben Nghe Ward, District 1, HCMC, Vietnam<br>Email: info@hyperonevn.com<br>Phone: +84 352 60 80 68 | +84 342 60 80 68</p>
+  <p data-lang="vi" style="display:none">Địa chỉ: 68 Nguyễn Huệ, Phường Bến Nghé, Quận 1, TP.HCM<br>Email: info@hyperonevn.com<br>Điện thoại: +84 352 60 80 68 | +84 342 60 80 68</p>
+  <p data-lang="jp" style="display:none">住所: ベンゲー区グエンフエ通り68番, 1区, ホーチミン市, ベトナム<br>メール: info@hyperonevn.com<br>電話番号: +84 352 60 80 68 | +84 342 60 80 68</p>
 </section>
 
 <section id="company" class="section company-section">
   <h2 data-lang="en">Company Information</h2>
   <h2 data-lang="vi" style="display:none">Thông tin công ty</h2>
+  <h2 data-lang="jp" style="display:none">会社情報</h2>
   <p data-lang="en">
     HYPER ONE CO., LTD<br>
     Tax Code: 0318921926<br>
     Legal Representative: Lu Minh Tri<br>
     Business Focus: AI SaaS for SME growth.<br>
     Bank: MB BANK<br>
-    Account Number: 624 68 68 68 68<br>
+    Account Number: 624 68 68 68 68
   </p>
   <p data-lang="vi" style="display:none">
     CÔNG TY TNHH HYPER ONE<br>
@@ -113,7 +127,15 @@
     Người đại diện pháp luật: Lữ Minh Trí<br>
     Lĩnh vực: AI SaaS cho phát triển doanh nghiệp SME.<br>
     Ngân hàng: MB BANK<br>
-    Số tài khoản: 624 68 68 68 68<br>
+    Số tài khoản: 624 68 68 68 68
+  </p>
+  <p data-lang="jp" style="display:none">
+    HYPER ONE CO., LTD（ハイパーワン有限会社）<br>
+    税コード: 0318921926<br>
+    法定代理人: ル・ミン・チ<br>
+    事業分野: 中小企業向けAI SaaS開発・成長支援<br>
+    銀行: MB BANK<br>
+    口座番号: 624 68 68 68 68
   </p>
 </section>
 
@@ -130,9 +152,10 @@
 <script>
 function switchLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? 'block' : 'none';
+    el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
   });
 }
+// Trigger hiệu ứng hiện lên khi scroll
 (function() {
   const sections = document.querySelectorAll('.section');
   const observer = new IntersectionObserver(entries => {
@@ -142,9 +165,10 @@ function switchLang(lang) {
       }
     });
   }, { threshold: 0.1 });
-  sections.forEach(sec => observer.observe(sec));
+  sections.forEach(section => observer.observe(section));
 })();
 </script>
 
 </body>
 </html>
+
