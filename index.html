@@ -190,3 +190,97 @@
   <a href="tel:+84352608068"><span class="icon">📞</span> Call</a>
   <a href="https://m.me/HYPERONECO.LTD" target="_blank"><span class="icon">💬</span> Chat</a>
 </div>
+<script>
+// Mặc định ngôn ngữ English
+let currentLang = 'en';
+
+// Hàm đổi ngôn ngữ
+function switchLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
+  });
+
+  // Nếu đang ở tab dịch vụ thì update lại nội dung tab theo ngôn ngữ
+  if (typeof showService === 'function') {
+    showService(currentServiceIndex);
+  }
+}
+
+// Kiểm tra URL # khi load trang
+(function() {
+  const hash = window.location.hash.substring(1);
+  if (hash === 'vi') {
+    switchLang('vi');
+  } else if (hash === 'jp') {
+    switchLang('jp');
+  } else {
+    switchLang('en');
+  }
+
+  // Hiệu ứng hiện từng section khi scroll
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+})();
+
+// Dịch vụ (tab) — 5 dịch vụ
+const serviceImages = [
+  "https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png",
+  "https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png",
+  "https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png",
+  "https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png",
+  "https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png"
+];
+
+const serviceDescriptionsEN = [
+  "Hyper Bot: An AI assistant that interacts with customers intelligently, enhancing service experience and boosting customer satisfaction.",
+  "Hyper Brain HB1: An orchestration engine that connects AI agents and business logic across all workflows.",
+  "AI CRM: Smart customer relationship management with auto reminders, segmentation, and predictions.",
+  "AI Sales Automation: Automate your sales pipeline from lead gen to follow-up using AI-driven logic.",
+  "Business Workflow Automation: Create custom flows to reduce manual effort and boost efficiency."
+];
+
+const serviceDescriptionsVI = [
+  "Hyper Bot: Trợ lý AI tương tác thông minh với khách hàng, nâng cao trải nghiệm và sự hài lòng.",
+  "Hyper Brain HB1: Bộ máy điều phối kết nối các tác tử AI và logic vận hành toàn bộ doanh nghiệp.",
+  "AI CRM: Quản lý quan hệ khách hàng thông minh với tự động nhắc nhở, phân nhóm và dự đoán.",
+  "Tự động hóa bán hàng bằng AI: Tự động hóa toàn bộ quy trình bán hàng từ khách tiềm năng tới chăm sóc sau bán.",
+  "Tự động hóa quy trình kinh doanh: Tạo luồng công việc tự động, giảm thủ công, tăng hiệu quả."
+];
+
+const serviceDescriptionsJP = [
+  "Hyper Bot: 顧客とインテリジェントに対話し、サービス体験と満足度を向上させるAIアシスタント。",
+  "Hyper Brain HB1: すべてのワークフローにAIエージェントとビジネスロジックを接続するオーケストレーションエンジン。",
+  "AI CRM: 自動リマインダー、セグメンテーション、予測機能を備えたスマートな顧客関係管理。",
+  "AIセールスオートメーション: リード生成からフォローアップまで営業パイプラインをAIで自動化。",
+  "ビジネスワークフローオートメーション: 手作業を減らし、効率を高めるためにカスタムフローを作成。"
+];
+
+let currentServiceIndex = 0;
+
+// Hàm khi click chọn tab dịch vụ
+function showService(index) {
+  currentServiceIndex = index;
+  document.getElementById('service-img').src = serviceImages[index];
+  if (currentLang === 'en') {
+    document.getElementById('service-desc').innerText = serviceDescriptionsEN[index];
+  } else if (currentLang === 'vi') {
+    document.getElementById('service-desc').innerText = serviceDescriptionsVI[index];
+  } else if (currentLang === 'jp') {
+    document.getElementById('service-desc').innerText = serviceDescriptionsJP[index];
+  }
+}
+
+// Load dịch vụ đầu tiên khi trang vừa vào
+showService(0);
+</script>
+
+</body>
+</html>
