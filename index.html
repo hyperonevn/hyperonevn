@@ -261,13 +261,17 @@ function setLang(lang) {
   <a href="https://m.me/HYPERONECO.LTD" target="_blank"><span class="icon">💬</span> Chat</a>
 </div>
 
+<!-- ✅ 1. Hàm đổi ngôn ngữ -->
 <script>
 function switchLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
   });
 }
-// Trigger hiệu ứng hiện lên khi scroll
+</script>
+
+<!-- ✅ 2. Script trigger hiệu ứng scroll -->
+<script>
 (function() {
   const sections = document.querySelectorAll('.section');
   const observer = new IntersectionObserver(entries => {
@@ -281,5 +285,16 @@ function switchLang(lang) {
 })();
 </script>
 
+<!-- ✅ 3. Script đọc #jp / #vi / #en đổi ngôn ngữ khi mở link -->
+<script>
+(function() {
+  document.addEventListener('DOMContentLoaded', function() {
+    const lang = (window.location.hash || '#en').substring(1);
+    switchLang(lang);
+  });
+})();
+</script>
+
 </body>
 </html>
+
