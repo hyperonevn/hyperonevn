@@ -61,12 +61,19 @@
     <a href="#contact">Contact</a>
     <a href="#company">Company</a>
     <span id="language-toggle">
-      <button onclick="switchLang('vi')">🇻🇳</button>
-      <button onclick="switchLang('en')">🇬🇧</button>
-      <button onclick="switchLang('jp')">🇯🇵</button>
+      <button onclick="setLang('vi')">🇻🇳</button>
+      <button onclick="setLang('en')">🇬🇧</button>
+      <button onclick="setLang('jp')">🇯🇵</button>
     </span>
   </nav>
 </header>
+
+<script>
+function setLang(lang) {
+  switchLang(lang);
+  window.location.hash = lang; // cập nhật hash url cho đúng
+}
+</script>
 
 <section id="about" class="section about-section">
   <h2 data-lang="en">About Hyper One</h2>
