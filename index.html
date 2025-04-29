@@ -261,25 +261,25 @@ function setLang(lang) {
   <a href="https://m.me/HYPERONECO.LTD" target="_blank"><span class="icon">💬</span> Chat</a>
 </div>
 
-<!-- ⬇️ 1. Định nghĩa switchLang trước -->
 <script>
 function switchLang(lang) {
   document.querySelectorAll('[data-lang]').forEach(el => {
     el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
   });
 }
-</script>
-
-<!-- ⬇️ 2. Sau đó mới đọc window.location.hash -->
-<script>
+// Trigger hiệu ứng hiện lên khi scroll
 (function() {
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang = (window.location.hash || '#en').substring(1);
-    switchLang(lang);
-  });
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
 })();
 </script>
 
 </body>
 </html>
-
