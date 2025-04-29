@@ -35,13 +35,27 @@
     .projects-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/projects.png'); }
     .contact-section { background-image: url('https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/contact.png'); }
     .company-section { background: #0f1117; }
-    .section h2 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+    .section h2 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
     footer { text-align: center; padding: 40px 20px; font-size: 0.9rem; color: #94a3b8; border-top: 1px solid #1e293b; background-color: #0f1117; }
     .fixed-contact-bar { position: fixed; bottom: 0; left: 0; width: 100%; background-color: #0f172a; display: flex; justify-content: space-around; align-items: center; padding: 10px 0; z-index: 10000; border-top: 1px solid #334155; }
-    .fixed-contact-bar a { color: #f3f4f6; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.95rem; padding: 6px 12px; border-radius: 6px; transition: background 0.2s; }
+    .fixed-contact-bar a { color: #f3f4f6; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 6px; font-size: 0.95rem; padding: 6px 12px; border-radius: 6px; transition: background 0.3s; }
     .fixed-contact-bar a:hover { background-color: #1e293b; }
     .fixed-contact-bar .icon { font-size: 1.1rem; }
     button { background: none; border: none; font-size: 1.2rem; cursor: pointer; margin-left: 8px; }
+    .tab-btn {
+      padding: 10px 16px;
+      border: 1px solid #38bdf8;
+      background: none;
+      color: #38bdf8;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .tab-btn:hover {
+      background-color: #38bdf8;
+      color: #0f172a;
+    }
   </style>
 </head>
 
@@ -58,13 +72,12 @@
     <a href="#contact">Contact</a>
     <a href="#company">Company</a>
     <span id="language-toggle">
-      <button onclick="switchLang('vi')">🇻🇳</button>
       <button onclick="switchLang('en')">🇬🇧</button>
+      <button onclick="switchLang('vi')">🇻🇳</button>
       <button onclick="switchLang('jp')">🇯🇵</button>
     </span>
   </nav>
 </header>
-
 <section id="about" class="section about-section">
   <h2 data-lang="en">About Hyper One</h2>
   <h2 data-lang="vi" style="display:none">Về Hyper One</h2>
@@ -90,6 +103,35 @@
   <p data-lang="en"><em>"The future is shaped by those who innovate fearlessly, adapt swiftly, and lead with purpose. In a world of constant change, success belongs to the businesses that evolve with courage and vision."</em> — Lu Minh Tri</p>
   <p data-lang="vi" style="display:none"><em>"Tương lai được tạo ra bởi những ai dám đổi mới không ngừng, thích nghi nhanh chóng và dẫn dắt bằng mục tiêu. Trong một thế giới thay đổi liên tục, thành công thuộc về những doanh nghiệp biết tiến hóa với lòng dũng cảm và tầm nhìn."</em> — Lữ Minh Trí</p>
   <p data-lang="jp" style="display:none"><em>"未来は、恐れずに革新し、迅速に適応し、目的を持って導く者たちによって形作られます。絶えず変化する世界では、勇気とビジョンを持って進化する企業が成功を収めます。"</em> — ル・ミン・チ</p>
+</section>
+
+<section id="services" class="section services-section" style="padding: 80px 20px; text-align: center;">
+  <h2 data-lang="en" style="font-family: 'Fugaz One', cursive; font-size: 2.8rem; color: #38bdf8; text-shadow: 2px 2px 8px rgba(56, 189, 248, 0.5); margin-bottom: 20px;">Our Services</h2>
+  <h2 data-lang="vi" style="display:none; font-family: 'Fugaz One', cursive; font-size: 2.8rem; color: #38bdf8; text-shadow: 2px 2px 8px rgba(56, 189, 248, 0.5); margin-bottom: 20px;">Dịch vụ của chúng tôi</h2>
+  <h2 data-lang="jp" style="display:none; font-family: 'Fugaz One', cursive; font-size: 2.8rem; color: #38bdf8; text-shadow: 2px 2px 8px rgba(56, 189, 248, 0.5); margin-bottom: 20px;">私たちのサービス</h2>
+
+  <p class="service-intro" data-lang="en" style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; max-width: 700px; margin: 0 auto 40px; color: #f3f4f6; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+    At Hyper One, we offer a suite of AI-powered tools designed to transform the way SMEs operate. Our solutions help businesses automate, optimize, and scale their operations efficiently.
+  </p>
+  <p class="service-intro" data-lang="vi" style="display:none; font-family: 'Space Grotesk', sans-serif; font-size: 1rem; max-width: 700px; margin: 0 auto 40px; color: #f3f4f6; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+    Tại Hyper One, chúng tôi cung cấp bộ công cụ AI tiên tiến nhằm thay đổi cách SMEs vận hành. Các giải pháp giúp doanh nghiệp tự động hóa, tối ưu hóa và mở rộng quy mô hiệu quả.
+  </p>
+  <p class="service-intro" data-lang="jp" style="display:none; font-family: 'Space Grotesk', sans-serif; font-size: 1rem; max-width: 700px; margin: 0 auto 40px; color: #f3f4f6; text-shadow: 1px 1px 3px rgba(0,0,0,0.4);">
+    Hyper Oneでは、中小企業の運営方法を変革するために設計されたAIツール群を提供しています。私たちのソリューションは、業務の自動化、最適化、スケールアップを支援します。
+  </p>
+
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px;">
+    <button onclick="showService(0)" class="tab-btn">Hyper Bot</button>
+    <button onclick="showService(1)" class="tab-btn">Hyper Brain HB1</button>
+    <button onclick="showService(2)" class="tab-btn">AI CRM</button>
+    <button onclick="showService(3)" class="tab-btn">AI Sales Automation</button>
+    <button onclick="showService(4)" class="tab-btn">Business Workflow Automation</button>
+  </div>
+
+  <div id="service-content">
+    <img id="service-img" src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="Service Image" style="max-width: 100%; height: auto; border-radius: 16px; margin-bottom: 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.5);">
+    <p id="service-desc" style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; max-width: 700px; margin: 0 auto; line-height: 1.7; color: #e2e8f0; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);"></p>
+  </div>
 </section>
 <section id="projects" class="section projects-section">
   <h2 data-lang="en">Projects & Impact</h2>
@@ -148,27 +190,3 @@
   <a href="tel:+84352608068"><span class="icon">📞</span> Call</a>
   <a href="https://m.me/HYPERONECO.LTD" target="_blank"><span class="icon">💬</span> Chat</a>
 </div>
-
-<script>
-function switchLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = (el.getAttribute('data-lang') === lang) ? 'block' : 'none';
-  });
-}
-// Trigger hiệu ứng hiện lên khi scroll
-(function() {
-  const sections = document.querySelectorAll('.section');
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, { threshold: 0.1 });
-  sections.forEach(section => observer.observe(section));
-})();
-</script>
-
-</body>
-</html>
-
