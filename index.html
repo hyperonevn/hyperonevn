@@ -83,74 +83,43 @@
 <section id="services" class="section services-section">
   <h2 data-lang="en">Our Services</h2>
   <h2 data-lang="vi" style="display:none">Dịch vụ của chúng tôi</h2>
-
-  <!-- Dịch vụ tổng quan -->
   <p data-lang="en">At Hyper One, we offer a suite of AI-powered tools designed to transform the way SMEs operate. Our solutions help businesses automate, optimize, and scale their operations efficiently.</p>
-  <p data-lang="vi" style="display:none">Tại Hyper One, chúng tôi cung cấp bộ công cụ AI mạnh mẽ giúp SMEs thay đổi cách vận hành, tự động hóa, tối ưu hóa và mở rộng quy mô hiệu quả.</p>
+  <p data-lang="vi" style="display:none">Tại Hyper One, chúng tôi cung cấp bộ công cụ AI giúp SME chuyển đổi cách vận hành, tự động hóa quy trình và phát triển hiệu quả.</p>
 
-  <!-- Tabs dịch vụ -->
-  <div class="tabs">
-    
-    <!-- Hyper Bot -->
-    <div class="tab">
-      <input type="radio" id="tab1" name="service-tabs" checked>
-      <label for="tab1" class="tab-label" data-lang="en">Hyper Bot</label>
-      <label for="tab1" class="tab-label" data-lang="vi" style="display:none">Hyper Bot</label>
-      <div class="tab-content">
-        <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/hyperbot.png" alt="Hyper Bot" class="service-image">
-        <p data-lang="en">Hyper Bot is an AI assistant that interacts with customers intelligently, enhancing service experience and boosting customer satisfaction.</p>
-        <p data-lang="vi" style="display:none">Hyper Bot là trợ lý AI thông minh, tương tác với khách hàng, nâng cao trải nghiệm dịch vụ và gia tăng sự hài lòng của khách hàng.</p>
-      </div>
+  <div class="tab-container">
+    <div class="tab-buttons">
+      <button class="tab-button active" onclick="showTab(0)">Hyper Bot</button>
+      <button class="tab-button" onclick="showTab(1)">Hyper Brain HB1</button>
+      <button class="tab-button" onclick="showTab(2)">AI CRM</button>
+      <button class="tab-button" onclick="showTab(3)">AI Sales Automation</button>
+      <button class="tab-button" onclick="showTab(4)">Business Workflow Automation</button>
     </div>
 
-    <!-- Hyper Brain HB1 -->
-    <div class="tab">
-      <input type="radio" id="tab2" name="service-tabs">
-      <label for="tab2" class="tab-label" data-lang="en">Hyper Brain HB1</label>
-      <label for="tab2" class="tab-label" data-lang="vi" style="display:none">Hyper Brain HB1</label>
-      <div class="tab-content">
-        <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="Hyper Brain HB1" class="service-image">
-        <p data-lang="en">Hyper Brain HB1 orchestrates business operations by unifying workflows into a single intelligent platform powered by AI.</p>
-        <p data-lang="vi" style="display:none">Hyper Brain HB1 điều phối toàn bộ hoạt động kinh doanh bằng cách hợp nhất các quy trình vào một nền tảng AI thông minh duy nhất.</p>
-      </div>
+    <div class="tab-content active">
+      <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="Hyper Bot" class="service-image">
+      <p data-lang="en"><strong>Hyper Bot:</strong> AI assistant that interacts with customers intelligently, enhancing experience and satisfaction.</p>
+      <p data-lang="vi" style="display:none"><strong>Hyper Bot:</strong> Trợ lý AI thông minh tương tác với khách hàng, nâng cao trải nghiệm và sự hài lòng.</p>
     </div>
-
-    <!-- AI CRM -->
-    <div class="tab">
-      <input type="radio" id="tab3" name="service-tabs">
-      <label for="tab3" class="tab-label" data-lang="en">AI CRM</label>
-      <label for="tab3" class="tab-label" data-lang="vi" style="display:none">AI CRM</label>
-      <div class="tab-content">
-        <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="AI CRM" class="service-image">
-        <p data-lang="en">AI CRM helps manage customer relationships intelligently, predicting customer needs and automating personalized engagement.</p>
-        <p data-lang="vi" style="display:none">AI CRM giúp quản lý mối quan hệ khách hàng thông minh, dự đoán nhu cầu và tự động hóa giao tiếp cá nhân hóa.</p>
-      </div>
+    <div class="tab-content">
+      <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="HB1" class="service-image">
+      <p data-lang="en"><strong>Hyper Brain HB1:</strong> An orchestration engine that connects AI agents and business logic across all workflows.</p>
+      <p data-lang="vi" style="display:none"><strong>Hyper Brain HB1:</strong> Bộ điều phối kết nối AI và logic vận hành trong toàn bộ quy trình doanh nghiệp.</p>
     </div>
-
-    <!-- AI Sales Automation -->
-    <div class="tab">
-      <input type="radio" id="tab4" name="service-tabs">
-      <label for="tab4" class="tab-label" data-lang="en">AI Sales Automation</label>
-      <label for="tab4" class="tab-label" data-lang="vi" style="display:none">Tự động hóa bán hàng bằng AI</label>
-      <div class="tab-content">
-        <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="AI Sales Automation" class="service-image">
-        <p data-lang="en">Automate lead generation, qualification, and nurturing processes with AI, reducing human effort and boosting conversions.</p>
-        <p data-lang="vi" style="display:none">Tự động hóa quá trình tạo khách hàng tiềm năng, đánh giá và chăm sóc khách hàng bằng AI, giảm sức lao động thủ công và gia tăng tỷ lệ chuyển đổi.</p>
-      </div>
+    <div class="tab-content">
+      <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="AI CRM" class="service-image">
+      <p data-lang="en"><strong>AI CRM:</strong> Smart customer relationship management with auto reminders, segmentation, and predictions.</p>
+      <p data-lang="vi" style="display:none"><strong>AI CRM:</strong> Quản lý quan hệ khách hàng thông minh với nhắc nhở, phân nhóm, và dự đoán hành vi.</p>
     </div>
-
-    <!-- Business Workflow Automation -->
-    <div class="tab">
-      <input type="radio" id="tab5" name="service-tabs">
-      <label for="tab5" class="tab-label" data-lang="en">Business Workflow Automation</label>
-      <label for="tab5" class="tab-label" data-lang="vi" style="display:none">Tự động hóa quy trình kinh doanh</label>
-      <div class="tab-content">
-        <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="Business Workflow Automation" class="service-image">
-        <p data-lang="en">Optimize operations by automating repetitive workflows, enabling teams to focus on strategic tasks and innovation.</p>
-        <p data-lang="vi" style="display:none">Tối ưu hóa vận hành bằng cách tự động hóa các quy trình lặp đi lặp lại, giúp đội ngũ tập trung vào nhiệm vụ chiến lược và sáng tạo.</p>
-      </div>
+    <div class="tab-content">
+      <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="AI Sales" class="service-image">
+      <p data-lang="en"><strong>AI Sales Automation:</strong> Automate your sales pipeline from lead gen to follow-up using AI-driven logic.</p>
+      <p data-lang="vi" style="display:none"><strong>AI Sales Automation:</strong> Tự động hóa toàn bộ quy trình bán hàng từ tìm kiếm khách hàng đến chốt đơn.</p>
     </div>
-
+    <div class="tab-content">
+      <img src="https://raw.githubusercontent.com/hyperonevn/hyperonevn/main/temp.png" alt="Workflow" class="service-image">
+      <p data-lang="en"><strong>Business Workflow Automation:</strong> Create custom flows to reduce manual effort and boost efficiency.</p>
+      <p data-lang="vi" style="display:none"><strong>Tự động hóa quy trình:</strong> Xây dựng luồng công việc tùy chỉnh để giảm công việc lặp lại và tăng hiệu quả.</p>
+    </div>
   </div>
 </section>
 
